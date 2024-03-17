@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IG PhotoFeed with Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" class="css">
     <title>IG Photo Feed with Bootstrap</title>
-  </head>
 </head>
 <body>
    
@@ -42,102 +40,134 @@
         </div>
     </nav>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <button type="button" class="btn btn-outline-secondary">Secondary</button>
-            <button type="button" class="btn btn-outline-secondary">Secondary</button>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<!-- Create a way to toggle between vertical cards and grid images -->
-<!-- navtabs -->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="home" aria-selected="true">Grid</button>
-    </li>
-
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#vertical" type="button" role="tab" aria-controls="profile" aria-selected="false">Vertical</button>
-    </li>
-  </ul>
-  <!-- need to center^^^ -->
-
-  <div class="tab-content" id="myTabContent">
-<!-- Grid of images -->
-
-<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="grid-tab">
-    <div class="container">
-        <div class="row">
-          <div class="col">
-            Column 1
-          </div>
-          <div class="col">
-            Column 2
-          </div>
-          <div class="col">
-            Column 3
-          </div>
-        </div>
-    </div>
-
-
-</div>
-    <div class="container">
-        <div class="row">
-          <div class="col">
-            Column 1
-          </div>
-          <div class="col">
-            Column 2
-          </div>
-          <div class="col">
-            Column 3
-          </div>
-        </div>
-    </div>
-
-    <!-- vertical column if cards -->
-    <div class="tab-pane fade" id="vertical" role="tabpanel" aria-labelledby="vertical-tab">
-        <div class="container">
-            <div class="row">
-              <div class="col-4"></div>
-              <div class="col-4">
-                Column 4
-              </div>
-              </div>
-    
-              <div class="row"></div>
-              <div class="col-5"></div>
-              <div class="col-5">
-                Column 5
-              </div>
-              </div>
-    
-              <div class="row"></div>
-              <div class="col-6"></div>
-              <div class="col-6">
-                Column 6
-              </div>
-              <div class="col-4"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Caption:
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Add the caption to your post here</label>
+                </div>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
-
+        </div>
     </div>
+
+    <!-- Create a way to toggle between vertical cards and grid images -->
+    <!-- Navtabs -->
+    <div class="container d-flex flex-column align-items-center">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
+              <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z"/>
+            </svg></button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#vertical" type="button" role="tab" aria-controls="vertical" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square-fill" viewBox="0 0 16 16">
+              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"/>
+            </svg></button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      </div>
+    </div>
+        <!-- Grid of images -->
+        <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+            <div class="container">
+                <div class="row row-cols-3 g-4">
+                <div class="col mb-4">
+                    <img src="https://images.pexels.com/photos/16533922/pexels-photo-16533922/free-photo-of-traditional-mosque-in-dubai-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 1"class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="https://images.pexels.com/photos/12861275/pexels-photo-12861275.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 2"class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="https://images.pexels.com/photos/7293100/pexels-photo-7293100.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 3"class="img-fluid">
+                </div>
+                </div>
+                <div class="row row-cols-3 g-4">
+                    <div class="col mb-4">
+                      <img src="https://images.pexels.com/photos/5638612/pexels-photo-5638612.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 4"class="img-fluid">
+                    </div>
+                    <div class="col">
+                      <img src="https://media.istockphoto.com/id/534225859/photo/kobe-japan.jpg?b=1&s=612x612&w=0&k=20&c=6v5NirGxMytezc6F7eBvr1Ikk-J40oSi3JIhCTg3dYw=" alt="Image 5"class="img-fluid">
+                    </div>
+                    <div class="col">
+                      <img src="https://images.pexels.com/photos/7031607/pexels-photo-7031607.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 6"class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="row row-cols-3 g-4">
+                    <div class="col">
+                      <img src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 7"class="img-fluid">
+                    </div>
+                    <div class="col">
+                      <img src="https://images.pexels.com/photos/9209722/pexels-photo-9209722.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 8"class="img-fluid">
+                    </div>
+                    <div class="col">
+                      <img src="https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Image 9"class="img-fluid">
+                    </div>
+                    <div class="col"><!-- empty column --></div>
+
+                  </div>
+            </div>
+        </div>
     
-</div>
+        
+        <!-- vertical column of cards -->
+        <div class="tab-pane fade" id="vertical" role="tabpanel" aria-labelledby="vertical-tab">
+            <div class="container">
+
+                <div class="row text-center d-flex align-items-center">
+                    <h5>Item 1</h5>
+                    <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <img src="https://via.placeholder.com/150" alt="Item 1" class="img-fluid text-center d-block mb-4">
+                        <p>Description of item 1 goes here</p>
+                      </div>
+                    </div>
+                    
+                <div class="row text-center d-flex align-items-center">
+                    <h5>Item 2</h5>
+                    <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <img src="https://via.placeholder.com/150" alt="Item 2" class="img-fluid text-center d-block mb-4">
+                        <p>Description of item 1 goes here</p>
+                      </div>
+                    </div>
+    
+                <div class="row text-center text-center d-flex align-items-center">
+                    <h5>Item 3</h5>
+                    <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/150" alt="Item 3" class="img-fluid text-center d-block mb-4">
+                        <p>Description of item 1 goes here</p>
+                      </div>
+                      </div>
+                    
+            
+                
+            </div>
+        </div>        
+    </div>
+
+
+
 
 
 
